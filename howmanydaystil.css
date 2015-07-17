@@ -1,0 +1,26 @@
+body {
+	font-family: 'Roboto',sans-serif;
+}
+
+h2 {
+	color: #81D4FA;
+	/*position: relative;*/
+	margin-top: 100px;
+}
+
+#target-date {
+	font-weight: bold;
+	color: #03A9F4;
+}
+
+
+#countdown {
+	font-family: 'Roboto','Helvetica','Arial',sans-serif;
+	/*width: 300px;*/
+	margin-left: 100px;
+	margin-top: 50px;
+	font-size: 36px;
+	font-weight: bold;
+	color: #EF5350;
+}
+

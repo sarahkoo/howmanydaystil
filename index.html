@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+	How many days til _____?
+	</title>
+
+<link href="howmanydaystil.css" rel="stylesheet" type="text/css">
+<script src="countdown.js"></script>
+
+<!-- MDL stuff -->
+<link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.indigo-pink.min.css">
+<script src="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.min.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+
+</head>
+
+<body>
+
+	<h2>How many days til <span id="target-date">Thursday, October 1</span>?</h2>
+
+	<div id="countdown"></div>
+
+	<script>
+	
+	var today = new Date();
+	var oct1date = new Date(2015, 9, 1);
+	// console.log(today);
+	var oct1 = countdown(new Date(2015, 9, 1)).toString();
+
+	var diff = Math.abs(oct1date-today);
+	// console.log(diff);
+	// console.log(diff/(86400*1000));
+	
+	// static: time to date
+	// var oct1days = countdown(new Date(2015, 9, 1), null, ~countdown.MONTHS & ~countdown.WEEKS & ~countdown.MILLISECONDS);
+	// document.getElementById('countdown').innerHTML = oct1days;
+
+
+	// "animated" countdown
+	var timerId = countdown(
+    				new Date(2015, 9, 1),
+				    function(ts) {
+				      document.getElementById('countdown').innerHTML = ts.toHTML("strong");
+				    },
+				    ~countdown.MONTHS & ~countdown.WEEKS & ~countdown.MILLISECONDS);
+
+	</script>
+
+
+</body>
+
+</html>
